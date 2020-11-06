@@ -1,0 +1,14 @@
+<launch>
+
+  <arg name="threadsnum" default="100" /> 
+  <arg name="queue_size" default="1000" />
+  <arg name="methods" default="1" />  <!--0:kdtree,1:direct7,0:direct1-->
+  <arg name="leafsize" default="1" />  <!--meter-->
+  <node pkg="ndt_matching" type="ndt_matching" name="ndt_matching">
+    <param name="threadsnum " value="$(arg threadsnum )" />
+    <param name="queue_size" value="$(arg queue_size)" />
+    <param name="methods" value="$(arg methods)" />
+    <param name="leafsize" value="$(arg leafsize)" />
+  </node>
+  <node name="rviz" pkg="rviz" type="rviz" output="screen"/>
+</launch>
