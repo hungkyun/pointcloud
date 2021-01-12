@@ -10,6 +10,7 @@ static void main_topic_callback(const sensor_msgs::PointCloud2::ConstPtr& input)
     msg.header.frame_id = "velodyne";
     g_scan_pub.publish(msg);
     std::cout<<"ok111000!"<<std::endl;
+    std::cout<<"ok111000!"<<std::endl;
 }
 int main(int argc, char *argv[])
 {
